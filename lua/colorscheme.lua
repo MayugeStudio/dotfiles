@@ -1,5 +1,4 @@
-vim.o.background = "dark"
-vim.g.moonflyItalics = false
+vim.g.rasmus_italic_comments = false
 
+-- Load the colorscheme
 vim.cmd.colorscheme("gruber-darker")
-

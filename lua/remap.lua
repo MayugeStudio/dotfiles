@@ -11,13 +11,19 @@ end
 -- cmd
 helper.nmap('<leader>e', ':Fern %:h<CR>')
 helper.nmap('<leader>f', ':Telescope<CR>')
-helper.nmap('<leader>pv', vim.cmd.Ex)
-helper.nmap('<leader>B', ':vsplit<CR><C-w>l:term<CR>')
+helper.nmap('<leader>B', ':Compile<CR>')
+helper.nmap('<leader>N', ':NextError<CR>')
+helper.nmap('<leader>T', vim.cmd.ToggleTerm)
 helper.tmap('<C-\\><C-\\>', '<C-\\><C-n>')
 
 -- move
 helper.nmap('H', '^')
 helper.nmap('L', '$')
+helper.vmap('H', '^')
+helper.vmap('L', '$')
 
--- complement
-helper.imap('<S-Tab>', '<C-n>')
+helper.nmap('?', '<Cmd>noh<CR>')
+
+-- neogit
+helper.nmap('<C-G>', ':Neogit<CR>')
+
