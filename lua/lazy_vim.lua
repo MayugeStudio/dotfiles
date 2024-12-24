@@ -17,7 +17,6 @@ require('lazy').setup({
     { 'lambdalisue/fern.vim', event = 'VeryLazy'},
     {  'ej-shafran/compile-mode.nvim', event = 'VeryLazy', branch = 'latest', dependencies = 'nvim-lua/plenary.nvim' },
     { 'akinsho/toggleterm.nvim', event = 'VeryLazy', version = '*', opts = { direction='horizontal', }, },
-    { 'shellRaining/hlchunk.nvim', event = { 'BufReadPre', 'BufNewFile' } },
     { "blazkowolf/gruber-darker.nvim", opts = { italic = { strings = false, comments = false, operators = false, folds = false } } },
     {
       "NeogitOrg/neogit",
