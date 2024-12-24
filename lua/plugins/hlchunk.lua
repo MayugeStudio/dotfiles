@@ -1,11 +1,7 @@
 require("hlchunk").setup({
     chunk = {enable=false},
     ident = {enable=false},
-    blank = {
-        enable = true,
-        char = { '.' },
-        priority = 20,
-    },
+    blank = {enable=false},
     line_num = {enable=false}
 })
 

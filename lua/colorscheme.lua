@@ -1,4 +1,5 @@
-vim.g.rasmus_italic_comments = false
+vim.g.minimal_italic_comments = false
 
 -- Load the colorscheme
-vim.cmd.colorscheme("gruber-darker")
+-- vim.cmd.colorscheme("everforest")
+vim.cmd.colorscheme("minimal-base16")
