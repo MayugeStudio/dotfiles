@@ -17,12 +17,6 @@ helper.tmap('<C-\\><C-\\>', '<C-\\><C-n>')
 helper.nmap('<C-l>', '<Cmd>bn<CR>')
 helper.nmap('<C-h>', '<Cmd>bp<CR>')
 
--- move
-helper.nmap('H', '^')
-helper.nmap('L', '$h')
-helper.vmap('H', '^')
-helper.vmap('L', '$h')
-
 -- mark
 helper.nmap('<C-m>', 'mT')
 helper.nmap('<C-i>', '`T')
@@ -34,7 +28,4 @@ helper.nmap('M', '%')
 helper.nmap('<leader>s', ':%s//g<Left><Left>')
 
 helper.nmap('?', '<Cmd>noh<CR>')
-
--- neogit
-helper.nmap('<C-G>', ':Neogit<CR>')
 
