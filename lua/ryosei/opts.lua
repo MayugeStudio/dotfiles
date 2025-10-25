@@ -6,6 +6,8 @@ vim.o.tabstop = 2
 vim.o.wrap = false
 vim.o.expandtab = true
 vim.o.swapfile = false
+vim.o.laststatus = 0
+vim.o.cmdheight = 1
 
 vim.o.signcolumn = 'number'
 vim.o.shiftwidth = 2
