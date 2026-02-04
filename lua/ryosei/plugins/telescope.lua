@@ -3,6 +3,7 @@ return {
   tag='0.1.5',
   dependencies = 'nvim-lua/plenary.nvim',
   config = function()
+
     require('telescope').setup({
       defaults={
         layout_config = {
@@ -20,7 +21,15 @@ return {
           find_files = {
               hidden = true,
           },
-      },
+          buffers = {
+            sort_mru = true,
+            mappings = {
+              i = {
+                ["<C-d>"] = "delete_buffer",
+              }
+            }
+          }
+      }
   })
   end
 }

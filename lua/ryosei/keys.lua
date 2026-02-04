@@ -8,8 +8,29 @@ for _, mode in pairs({'n', 'v', 'i', 's', 'o', 'c', 't', 'x'}) do
 	end
 end
 
+local no_preview = function()
+  return require('telescope.themes').get_dropdown({
+    borderchars = {
+      { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
+      prompt = {"─", "│", " ", "│", '┌', '┐', "│", "│"},
+      results = {"─", "│", "─", "│", "├", "┤", "┘", "└"},
+      preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
+    },
+    width = 0.8,
+    previewer = false,
+    prompt_title = false
+  })
+end
+
+vim.api.nvim_create_user_command(
+  'DropdownTelescope',
+  function()
+    require("telescope.builtin").find_files(no_preview())
+  end,
+  {}
+)
 -- cmd
-helper.nmap('<leader>f', '<Cmd>Telescope find_files<CR>')
+helper.nmap('<leader>f', '<Cmd>DropdownTelescope<CR>')
 helper.nmap('<leader>b', '<Cmd>Telescope buffers<CR>')
 helper.nmap('<leader>g', '<Cmd>Telescope live_grep<CR>')
 helper.tmap('<C-\\><C-\\>', '<C-\\><C-n>')
