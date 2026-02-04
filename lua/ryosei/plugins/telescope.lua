@@ -5,11 +5,15 @@ return {
   config = function()
     require('telescope').setup({
       defaults={
+        layout_config = {
+          width=0.5
+        },
         file_ignore_patterns={
           "node_modules/",
           "%.git/",
           ".git/",
           "%.exe",
+          "%vendor"
         },
       },
       pickers = {

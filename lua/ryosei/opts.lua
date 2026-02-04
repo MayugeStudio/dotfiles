@@ -20,3 +20,8 @@ vim.o.showtabline = 1
 vim.o.helplang = 'en'
 vim.o.clipboard = 'unnamedplus'
 
+if vim.fn.has("win32") == 1 then
+  vim.opt.shell = "bash"
+  vim.opt.shellcmdflag = "-c"
+  vim.opt.shellxquote = ""
+end
