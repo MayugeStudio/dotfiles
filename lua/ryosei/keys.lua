@@ -9,9 +9,9 @@ for _, mode in pairs({'n', 'v', 'i', 's', 'o', 'c', 't', 'x'}) do
 end
 
 -- cmd
-helper.nmap('<leader>e', '<Cmd>Fern %:h -drawer<CR>')
 helper.nmap('<leader>f', '<Cmd>Telescope find_files<CR>')
-helper.nmap('<leader>T', vim.cmd.ToggleTerm)
+helper.nmap('<leader>b', '<Cmd>Telescope buffers<CR>')
+helper.nmap('<leader>g', '<Cmd>Telescope live_grep<CR>')
 helper.tmap('<C-\\><C-\\>', '<C-\\><C-n>')
 
 helper.nmap('<C-l>', '<Cmd>bn<CR>')
