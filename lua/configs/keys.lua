@@ -34,9 +34,10 @@ helper.nmap('<leader>f', '<Cmd>DropdownTelescope<CR>')
 helper.nmap('<leader>b', '<Cmd>Telescope buffers<CR>')
 helper.nmap('<leader>g', '<Cmd>Telescope live_grep<CR>')
 helper.tmap('<C-\\><C-\\>', '<C-\\><C-n>')
+helper.tmap('<C-¥><C-¥>', '<C-\\><C-n>')
 
-helper.nmap('<C-l>', '<Cmd>bn<CR>')
-helper.nmap('<C-h>', '<Cmd>bp<CR>')
+-- helper.nmap('<C-l>', '<Cmd>bn<CR>')
+-- helper.nmap('<C-h>', '<Cmd>bp<CR>')
 
 -- mark
 helper.nmap('<C-m>', 'mT')

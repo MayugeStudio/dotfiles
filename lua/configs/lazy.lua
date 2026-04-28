@@ -12,6 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup(
   {
-    spec = { import = "ryosei.plugins" },
+    spec = { import = "plugins" },
   }
 )
