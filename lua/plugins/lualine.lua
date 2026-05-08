@@ -4,15 +4,21 @@ return {
     require('lualine').setup({
       options = {
         icons_enabled = false,
-        theme = 'dracula',
+        theme = "auto", -- Can also be "auto" to detect automatically.
+        -- theme = 'dracula',
       },
       sections = {
-        lualine_a = {'mode'},
-        lualine_b = {'branch'},
-        lualine_c = {'filename'},
+        lualine_a = {'branch'},
+        lualine_b = {
+          {
+            'filename',
+            path = 3,
+          }
+        },
+        lualine_c = {'diff'},
         lualine_x = {'filetype'},
         lualine_y = {'encoding'},
-        lualine_z = {'location'}
+        lualine_z = {'location', 'progress'}
       },
     })
   end
