@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 
+vim.o.background = "dark"
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.tabstop = 2
@@ -29,3 +30,9 @@ if vim.fn.has("win32") == 1 then
   vim.opt.shellcmdflag = "-c"
   vim.opt.shellxquote = ""
 end
+
+vim.api.nvim_create_user_command(
+  'Here',
+  function() vim.cmd(":lcd %:h") end,
+  { desc = "" }
+)

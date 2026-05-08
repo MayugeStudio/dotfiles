@@ -11,10 +11,17 @@
 --}
 
 return {
-  "dracula/vim",
-  config = function()
-    vim.g.dracula_italic = false
-    vim.cmd("colorscheme dracula")
-    vim.cmd(":hi statusline guibg=NONE")
+  "neanias/everforest-nvim",
+  config = function() 
+    vim.cmd("colorscheme everforest")
   end
 }
+
+-- return {
+--   "dracula/vim",
+--   config = function()
+--     vim.g.dracula_italic = false
+--     vim.cmd("colorscheme dracula")
+--     vim.cmd(":hi statusline guibg=NONE")
+--   end
+-- }
