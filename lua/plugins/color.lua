@@ -10,10 +10,25 @@
 --  end
 --}
 
+-- return {
+--   "neanias/everforest-nvim",
+--   config = function() 
+--     vim.cmd("colorscheme everforest")
+--   end
+-- }
+
+-- return {
+--   "blazkowolf/gruber-darker.nvim",
+--   config = function()
+--     vim.cmd("colorscheme gruber-darker")
+--   end
+-- }
+
 return {
-  "neanias/everforest-nvim",
-  config = function() 
-    vim.cmd("colorscheme everforest")
+  "hwadii/gruber_darker.nvim",
+  dependencies = { "rktjmp/lush.nvim" },
+  config = function()
+    vim.cmd("colorscheme gruber_darker")
   end
 }
 

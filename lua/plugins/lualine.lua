@@ -12,7 +12,7 @@ return {
         lualine_b = {
           {
             'filename',
-            path = 3,
+            path = 4,
           }
         },
         lualine_c = {'diff'},

@@ -1,19 +1,32 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  branch = 'main',
   build = ':TSUpdate',
+  init = function()
+    vim.treesitter.language.register("bash", "zsh")
+  end,
   config = function()
-
-    require("nvim-treesitter.configs").setup({
-        ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "go", "markdown", "python", "rust", "typescript", "html", "css" },
-        sync_install = false,
-        auto_install = true,
-        highlight = {
-          enable = true,
-        },
-        indent = {
-          enable = false,
-        }
+    require("nvim-treesitter").install({
+      "c",
+      "cpp",
+      "lua",
+      "vim",
+      "vimdoc",
+      "go",
+      "markdown",
+      "python",
+      "rust",
+      "typescript",
+      "html",
+      "css",
     })
-  end
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "*",
+      callback = function(args) 
+        pcall(vim.treesitter.start, args.buf)
+      end,
+    })
+  end,
 }
 
