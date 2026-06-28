@@ -1,4 +1,4 @@
-vim.lsp.enable({ 'luals', 'gopls' })
+vim.lsp.enable({ 'luals', 'gopls', 'clangd', 'ts_ls'})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
@@ -12,9 +12,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     mapn('gd', vim.lsp.buf.definition, 'Go to definition')
     mapn('gD', vim.lsp.buf.declaration, 'Go to declaration')
-    mapn('[d', vim.diagnostic.goto_prev, 'Previous diagnostic')
-    mapn(']d', vim.diagnostic.goto_next, 'Next diagnostic')
-    mapn('<leader>e', vim.diagnostic.open_float, 'Show diagnostic')
+    mapn('[d', function () vim.diagnostic.jump({ count = -1, float = true }) end, 'Next diagnostic')
+    mapn(']d', function () vim.diagnostic.jump({ count = 1, float = true }) end, 'Next diagnostic')
+
+    -- mapn('<leader>e', vim.diagnostic.open_float, 'Show diagnostic')
     mapn('<leader>q', vim.diagnostic.setloclist, 'Diagnostics to loclist')
 
     mapi('<C-l>', vim.lsp.completion.get, 'Trigger completion')

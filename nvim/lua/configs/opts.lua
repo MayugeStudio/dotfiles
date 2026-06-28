@@ -32,7 +32,7 @@ vim.opt.incsearch = true
 
 vim.opt.shada = "!,'100,<50,s10,h"
 vim.opt.swapfile = false
-vim.opt.backup = true
+vim.opt.backup = false
 
 vim.o.updatetime = 1000
 vim.o.completeopt = 'menu,menuone,noselect,popup'

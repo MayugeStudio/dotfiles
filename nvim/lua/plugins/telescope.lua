@@ -16,6 +16,9 @@ return {
           "%.exe",
           "%vendor"
         },
+        preview = {
+          treesitter = false,
+        },
       },
       pickers = {
           find_files = {
