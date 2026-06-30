@@ -24,11 +24,27 @@
 --   end
 -- }
 
+-- return {
+--   "hwadii/gruber_darker.nvim",
+--   dependencies = { "rktjmp/lush.nvim" },
+--   config = function()
+--     vim.cmd("colorscheme gruber_darker")
+--   end
+-- }
+
 return {
-  "hwadii/gruber_darker.nvim",
-  dependencies = { "rktjmp/lush.nvim" },
+  "ellisonleao/gruvbox.nvim",
+  priority = 1000,
   config = function()
-    vim.cmd("colorscheme gruber_darker")
+    require("gruvbox").setup({
+      italic = {
+        strings = false,
+        comments = false,
+        operators = false,
+        folds = false,
+      },
+    })
+    vim.cmd("colorscheme gruvbox")
   end
 }
 
