@@ -1,0 +1,80 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+]
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding = { x = 8, y = 8 }
+dynamic_padding = true
+opacity = 0.85
+# decorations = "none"
+dynamic_title = true
+startup_mode = "Fullscreen"
+
+[window.dimensions]
+columns = 120
+lines = 40
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[font]
+size = 16.0
+builtin_box_drawing = true
+
+[font.normal]
+family = "Mononoki"
+style = "Regular"
+
+[font.bold]
+family = "Mononoki"
+style = "Bold"
+
+[font.italic]
+family = "Mononoki"
+style = "Italic"
+
+[font.offset]
+x = 0
+y = 1
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+color = "#ffffff"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[cursor]
+unfocused_hollow = true
+thickness = 0.15
+
+[cursor.style]
+shape = "Block"
+blinking = "Off"
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "Insert", mods = "Shift", action = "PasteSelection" },
+  { key = "Key0", mods = "Control", action = "ResetFontSize" },
+  { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  { key = "F", mods = "Control|Shift", action = "SearchForward" },
+  { key = "B", mods = "Control|Shift", action = "SearchBackward" },
+  { key = "F11", action = "ToggleFullscreen" },
+  { key = "Space", mods = "Control|Shift", action = "ToggleViMode" },
+  { key = "Return", mods = "Shift", chars = "\u001B\r" },
+]
